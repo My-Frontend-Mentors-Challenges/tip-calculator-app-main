@@ -1,44 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <main>
+    <img src="./images/logo.svg" alt="splitter logo">
+    <form>
+      <section class="inputs">
+        <section class="bill">
+          <label for="bill">Bill</label>
+          <div class="input-wrap">
+            <img src="./images/icon-dollar.svg" alt="dollar icon" class="input-img" />
+            <input type="text" inputmode="numeric" pattern="\d" name="bill" id="bill" placeholder="0" />
+          </div>
+        </section>
+        <section class="tip-percent">
+          <label for="tip-percent">Select Tip %</label>
+          <section class="controls">
+            <button type="button" name="tip-percent" value="5">5%</button>
+            <button type="button" name="tip-percent" value="10">10%</button>
+            <button type="button" name="tip-percent" value="15">15%</button>
+            <button type="button" name="tip-percent" value="25">25%</button>
+            <button type="button" name="tip-percent" value="50">50%</button>
+            <input type="text" inputmode="numeric" pattern="\d" name="tip-percent" id="tip-percent" placeholder="Custom" />
+          </section>
 
-  Bill
+        </section>
+        <section class="number-of-people">
+          <label for="number-of-people">Number of People</label>
+          <div class="input-wrap">
+            <img src="./images/icon-person.svg" alt="" class="input-img" />
+            <input type="text" inputmode="numeric" pattern="\d" name="number-of-people" id="number-of-people" placeholder="0" />
+          </div>
+        </section>
+      </section>
+      <section class="outputs">
+        <div class="tip-amount-container">
+          <div><h2>Tip Amount</h2><span class="per-person">/ person</span></div>
+          <span class="tip-amount"><img src="./images/icon-dollar - Copy.svg" alt="dollar icon">0.00</span>
+        </div>
+        <div class="total-container">
+          <div><h2>Total</h2><span class="per-person">/ person</span></div>
+          <span class="tip-amount"><img src="./images/icon-dollar - Copy.svg" alt="dollar icon">0.00</span>
+        </div>
+        <button type="reset">Reset</button>
+      </section>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
+    </form>
+  </main>
 </body>
+
 </html>
