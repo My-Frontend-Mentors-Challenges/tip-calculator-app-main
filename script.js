@@ -22,9 +22,9 @@ controlBtns.addEventListener('click',(e)=>{
     button.classList.add('active-btn');
     revalidate();
 });
-customInput.addEventListener('input',()=>{
+customInput.addEventListener('input',(e)=>{
     removeActiveBtn();
-    tipPercent=customInput.value;
+    tipPercent=e.target.value;
     revalidate();
 })
 NumberOfPeopleDiv.addEventListener('input',(e)=>{
