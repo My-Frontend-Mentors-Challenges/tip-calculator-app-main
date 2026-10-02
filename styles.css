@@ -2,107 +2,129 @@
     font-family: 'Space Mono';
     src: url(./font/SpaceMono-Regular.ttf);
 }
-:root{
---Green-300: hsl(172, 67%, 70%);
---Green-400: hsl(172, 67%, 45%);
---Green-800: hsl(183, 100%, 20%);
---Green-900: hsl(183, 100%, 15%);
---Grey-500: hsl(186, 14%, 43%);
---Grey-400: hsl(184, 14%, 56%);
---Grey-200: hsl(185, 41%, 84%);
---Grey-50: hsl(189, 47%, 97%);
---White: hsl(0, 100%, 100%);
+
+:root {
+    --Green-300: hsl(172, 67%, 70%);
+    --Green-400: hsl(172, 67%, 45%);
+    --Green-800: hsl(183, 100%, 20%);
+    --Green-900: hsl(183, 100%, 15%);
+    --Grey-500: hsl(186, 14%, 43%);
+    --Grey-400: hsl(184, 14%, 56%);
+    --Grey-200: hsl(185, 41%, 84%);
+    --Grey-50: hsl(189, 47%, 97%);
+    --White: hsl(0, 100%, 100%);
 }
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Space Mono';
     font-weight: 700;
 }
-body{
+
+body {
     background-color: var(--Grey-200);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
-main{
+
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-main>img{
+
+main>h1 {
     padding: 3rem;
 }
-form{
+
+form {
     background-color: var(--White);
     border-radius: 20px;
     padding: 2.5rem 2rem;
 }
-label{
+
+label {
     display: block;
     color: var(--Grey-500);
     margin-bottom: 0.4rem;
 }
-input,button{
+
+input,
+button {
     border: none;
     outline: none;
     font-size: 1.5rem;
 }
-input{
+
+input {
     text-align: end;
     background-color: var(--Grey-50);
     border-radius: 5px;
     color: var(--Green-900);
 }
-input:hover{
+
+input:hover {
     outline: 3px solid var(--Green-400);
     cursor: pointer;
 }
-input::placeholder{
+
+input::placeholder {
     color: var(--Grey-200);
 }
-.inputs{
+
+.inputs {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 2rem;
 }
-#bill,#number-of-people{
+
+#bill,
+#number-of-people {
     padding: 0.5rem 1rem;
     width: 100%;
 }
-.input-wrap{
+
+.input-wrap {
     position: relative;
 }
-.input-img{
+
+.input-img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 1rem;
 }
-.tip-percent .controls{
+
+.tip-percent .controls {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     padding-top: 1rem;
 }
-.controls>button{
+
+.controls>button {
     padding: 0.5rem;
     background-color: var(--Green-900);
     color: var(--White);
     border-radius: 5px;
 }
-#tip-percent{
+
+#tip-percent {
     width: 100%;
     padding-right: 1rem;
     padding-left: 1rem;
 }
-#tip-percent::placeholder{
+
+#tip-percent::placeholder {
     color: var(--Grey-500);
 }
-.outputs{
+
+.outputs {
     background-color: var(--Green-900);
     border-radius: 20px;
     padding: 3rem 1.5rem 1.5rem;
@@ -110,30 +132,37 @@ input::placeholder{
     flex-direction: column;
     gap: 1.7rem;
 }
-.tip-amount-container, .total-container{
+
+.tip-amount-container,
+.total-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
 }
-.outputs h2{
+
+.outputs h2 {
     font-size: 1rem;
     color: var(--White);
 }
-.per-person{
+
+.per-person {
     font-size: 0.8rem;
     color: var(--Grey-500);
 }
-.tip-amount{
+
+.tip-amount {
     display: flex;
     align-items: center;
     margin-left: auto;
     font-size: 1.7rem;
     color: var(--Green-400);
 }
-.tip-amount img{
+
+.tip-amount img {
     margin-right: 0.2rem;
 }
-button[type="reset"]{
+
+button[type="reset"] {
     background-color: var(--Green-400);
     text-align: center;
     color: var(--Green-900);
@@ -142,45 +171,53 @@ button[type="reset"]{
     font-size: 1.2rem;
     margin-top: auto;
 }
-button[type="reset"]:disabled{
+
+button[type="reset"]:disabled {
     background-color: var(--Green-800);
 }
-button:hover:not(:disabled){
+
+button:hover:not(:disabled) {
     background-color: var(--Green-300);
     color: var(--Green-900);
     cursor: pointer;
 }
-.controls>.active-btn{
+
+.controls>.active-btn {
     background-color: var(--Green-400);
     color: var(--Green-900);
 }
 
 @media screen and (min-width:30rem) {
-    main{
+    main {
         max-width: 30rem;
     }
 }
 
 @media screen and (min-width:60rem) {
-    main{
+    main {
         max-width: 60rem;
     }
-    form{
+
+    form {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
-    .inputs{
+
+    .inputs {
         margin: 0;
         padding: 1rem;
     }
-    .outputs{
+
+    .outputs {
         padding: 4rem 2.5rem 2.5rem;
     }
-    .tip-percent .controls{
+
+    .tip-percent .controls {
         grid-template-columns: 1fr 1fr 1fr;
     }
-    #tip-percent{
+
+    #tip-percent {
         text-align: center;
     }
 }
